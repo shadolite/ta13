@@ -13,6 +13,12 @@ Course::Course(int size)
    classList = new Student [this -> size];
 }
 
+Course::~Course()
+{
+	cout << "Cleaning up course: " << getName() << ".\n";
+	classList = NULL;
+}
+
 Student Course::getStudent(int index) const
 {
    // TODO: Fill this in

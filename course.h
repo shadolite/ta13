@@ -15,6 +15,7 @@ private:
 
 public:
    Course(int size);
+   ~Course();
 
    std::string getName() const { return name; }
    void setName(std::string name) { this->name = name; }
