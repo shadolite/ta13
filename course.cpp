@@ -29,7 +29,12 @@ Course :: Course (const Course & rhs)
 Course::~Course()
 {
 	cout << "Cleaning up course: " << getName() << ".\n";
-	classList = NULL;
+
+	if (classList != NULL)
+	{
+		delete[] classList;
+		classList = NULL;
+	}
 }
 
 Student Course::getStudent(int index) const
